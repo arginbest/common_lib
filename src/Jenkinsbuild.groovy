@@ -3,6 +3,7 @@ package com.lib
 import groovy.json.JsonSlurper
 import java.text.SimpleDateFormat
 
+runPipeline() { 
 node() {
    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')),
                pipelineTriggers([pollSCM('* * * * *')]),
@@ -47,8 +48,4 @@ node() {
           stage("cleanUp") {
                   cleanWs()
           }
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> 7c09ce76a63c722845d18c8803ec2392561d857d
+    }}
