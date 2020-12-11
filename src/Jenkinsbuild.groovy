@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 runPipeline() {
         node {
    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')),
