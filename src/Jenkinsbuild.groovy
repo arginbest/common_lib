@@ -1,11 +1,10 @@
 #!/usr/bin/env groovy
-runPipeline() {
-        stage("Hi"){
-                
-        }
-        node {
+
+
+
+
+node {
                 stage ("succuss") {
                         echo "Hello"
                 }
         }
-}
