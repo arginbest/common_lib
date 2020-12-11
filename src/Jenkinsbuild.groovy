@@ -5,3 +5,4 @@ runPipeline() {
                         echo "Hello"
                 }
         }
+}
