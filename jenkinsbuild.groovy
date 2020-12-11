@@ -1,3 +1,8 @@
+#!/usr/bin/env groovy
+package com.lib
+import groovy.json.JsonSlurper
+import java.text.SimpleDateFormat
+
 node {
    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')),
                pipelineTriggers([pollSCM('* * * * *')]),
