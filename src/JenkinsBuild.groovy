@@ -1,8 +1,5 @@
-#!/usr/bin/env groovy
-call() {
-        node {
-                stage ("succuss") {
+node {
+        stage ("succuss") {
                         echo "Hello"
                 }
         }
-}
