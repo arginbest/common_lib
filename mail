@@ -1,0 +1,17 @@
+node {
+	stage("Stage1"){
+		echo "hello"
+}
+	stage("Stage2"){
+		echo "hello"
+}
+	stage("Stage3"){
+		echo "hello"
+}
+	stage("Stage4"){
+		echo "hello baur"
+}
+	stage("Send Notifications to mail"){
+		mail bcc: '', body: 'hello Baur from Jenkins', cc: '', from: '', replyTo: '', subject: 'test', to: 'baurzhansiit@gmail.com'
+	}
+}
