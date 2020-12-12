@@ -1,7 +1,13 @@
-def call() { 
-        node {
-        stage ("succuss") {
-                        echo "Hello"
-                }
-        }
+def call(body) {
+def config = [:]
+body.resolveStrategy = Closure.DELEGATE_FIRST
+body.delegate = config
+body()
+
+pipeline{
+//your code
+stage("Hello") {
+        echo "hello"
+}
+}
 }
